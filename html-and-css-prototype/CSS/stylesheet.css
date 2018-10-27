@@ -40,3 +40,80 @@ h1 {
 */
 
 /* Your CSS code goes here */
+.form-container {
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+	width: 270px;
+	margin: auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: "aside aside" "form form" "save share";
+	grid-template-rows: 1fr 4fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+aside {
+	grid-area: aside;
+	display: flex;
+	background-color: #424242;
+	color: #fff;
+	text-align: center;
+	justify-content: center;
+	border-radius: 3px;
+}
+
+aside div {
+	align-self: center;
+}
+
+aside div span {
+	font-weight: bold;
+}
+
+form {
+	grid-area: form;
+	border: 2px solid #eaeaea;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: "progress progress" "section section" "input submit" "link empty";
+	grid-template-rows: 15px 2fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
+}
+
+progress {
+	grid-area: progress;
+}
+
+section {
+	grid-area: section;
+}
+
+.donation{
+	grid-area: input;
+	display:inline-block;
+	position: relative;
+	}
+.donation input{
+	padding-left:15px;
+	}
+.donation:before {
+	position: absolute;
+    content:"$";
+    left:5px;
+	top:2px;
+ 	}
+
+button[type=submit] {
+	grid-area: submit;
+}
+
+em {
+	grid-area: link;
+}
+
+button[name=save] {
+	grid-area: save;
+}
+
+button[name=share] {
+	grid-area: share;
+}
