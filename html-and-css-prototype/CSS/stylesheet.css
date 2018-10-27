@@ -42,7 +42,6 @@ h1 {
 /* Your CSS code goes here */
 .form-container {
 	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
-
 	width: 270px;
 	margin: auto;
 	display: grid;
@@ -69,10 +68,11 @@ aside div {
 	margin-right: -20px;
 }
 
-#total-needed {
+#remaining {
 	font-weight: bold;
 }
 
+/* I finally found how to make these arrows on CSS tricks */
 mark {
   width: 0;
   height: 0;
@@ -110,6 +110,10 @@ progress {
 	height: 100%;
 }
 
+/*
+	Stackoverflow to get the browsers to behave. Babel would probably make this
+	unnecessary
+*/
 progress::-webkit-progress-bar {background-color: #f5f5f5; width: 100%;}
 progress::-webkit-progress-value {background-color: #EF5F3C !important;}
 progress::-moz-progress-bar {background-color: #EF5F3C !important;}
@@ -134,6 +138,11 @@ p {
 	font-weight: bold;
 }
 
+/*
+	Stackoverflow again to put the $ inside the box. I did something like this
+	before using a background image, but I assumed from the directions that would
+	not be allowed.
+*/
 #donation {
 	grid-area: input;
 	display: inline-block;
